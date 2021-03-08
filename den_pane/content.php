@@ -37,7 +37,7 @@ while($text !== ''){
     if($pdf->getY()>=($pdf->getPageHeight() - $page_margin_bottom - 5)) break;
 }
 $pdf->setPageRegions(array()); // vymazání oblasti
-// přidání středového obrázku (ve wordpresu nefunguje)
-$pdf->Image('img/jesus.png', 40, 80, 70, 50, 'PNG', '', '', false, 300, '', false, false, 0, '', false, false);
-
+// přidání středového obrázku
+$img = $pdf->Image('https://wordpress.farnostfulnek.cz/wp-content/uploads/2021/01/DSC_0027-scaled.jpg', 55, 80, 65, 45, '', '', '', false, 300, '', false, false, 0, '', false, false);
+$pdf->AddPage();
 ?>
