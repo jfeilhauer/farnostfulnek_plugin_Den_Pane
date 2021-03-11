@@ -10,6 +10,8 @@
  */
 include 'den_pane.php';
 // vytvoření kódu pro vložení do stránky [/den_pane_zkouska]
-add_shortcode("den_pane_zkouska", 'den_pane');
-
+// pro wordpress
+//add_shortcode("den_pane_zkouska", 'den_pane');
+// pro testování (na webu zakomentovat)
+den_pane(); 
 ?>
