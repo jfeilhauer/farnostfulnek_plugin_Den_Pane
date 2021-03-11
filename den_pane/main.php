@@ -11,7 +11,7 @@
 include 'den_pane.php';
 // vytvoření kódu pro vložení do stránky [/den_pane_zkouska]
 // pro wordpress
-if( is_admin() ) add_shortcode("den_pane_zkouska", 'den_pane');
+if( !is_admin() ) add_shortcode("den_pane_zkouska", 'den_pane');
 // pro testování (na webu zakomentovat)
 //den_pane(); 
 ?>
