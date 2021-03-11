@@ -294,20 +294,23 @@ $pdf->SetFont($font, '', 12);
 $text = 'Fulnek';
 $pdf->MultiCell(0, 6 , $text, $border, 'R', 0, 1, '', '', true);
 
+$pdf->Ln(3);
 $pdf->SetFont($font, '', 11);
 $y = $pdf->GetY();
-$text = 'Ne 28.2.
-Út 2.3.
-St 3.3.
-Čt 4.3.
-Pá 5.3.
-So 6.3.
-Ne 7.3.';
+$text = 'Ne   28.2.
+
+
+
+Út     2.3.
+St     3.3.
+Čt     4.3.
+Pá     5.3.
+So     6.3.
+
+Ne     7.3.';
 $pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
-$pdf->SetXY(80, $y);   
-$text = '9:00 Za † Annu Šindlerovou, manžela,
-syna Jiřího, rodiče z obou stran a živou
-rodinu
+$pdf->SetXY(78, $y);   
+$text = '9:00 Za † Annu Šindlerovou, manžela, syna Jiřího, rodiče z obou stran a živou rodinu
 16:00 _____________________
 Za členy živého růžence
 Mše svatá za farnost
@@ -318,5 +321,82 @@ __________________________
 9:00 Za † Karla Pavlicu a živou rodinu
 16:00 _____________________';
 $pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->Ln(5);
 
+$pdf->SetX(115);
+$pdf->SetFont($font, '', 12); 
+$text = 'Stachovice';
+$pdf->MultiCell(0, 6 , $text, $border, 'R', 0, 1, '', '', true);
+$pdf->Ln(3);
+
+$pdf->SetFont($font, '', 11);
+$y = $pdf->GetY();
+$text = 'Ne   28.2.
+Út     2.3.
+Ne     7.3.';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->SetXY(78, $y);   
+$text = '_________________________
+Za členy živého růžence
+_________________________';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->Ln(5);
+
+$pdf->SetX(115);
+$pdf->SetFont($font, '', 12); 
+$text = 'Děrné';
+$pdf->MultiCell(0, 6 , $text, $border, 'R', 0, 1, '', '', true);
+$pdf->Ln(3);
+
+$pdf->SetFont($font, '', 11);
+$y = $pdf->GetY();
+$text = 'Ne   28.2.
+St     3.3.
+Ne     7.3.';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->SetXY(78, $y);   
+$text = 'Za rodinu Čížovu a Zuzaníkovu
+Za členy živého růžence
+Za † a živou rodinu Mangoltovu
+a Machalovu ';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->Ln(5);
+
+$pdf->SetX(115);
+$pdf->SetFont($font, '', 12);
+$text = 'Lukavec';
+$pdf->MultiCell(0, 6 , $text, $border, 'R', 0, 1, '', '', true);
+$pdf->Ln(3);
+
+$pdf->SetFont($font, '', 11);
+$y = $pdf->GetY();
+$text = 'Ne   28.2.
+Čt     4.3.
+Ne     7.3.';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->SetXY(78, $y);   
+$text = 'Petr David
+Za členy živého růžence
+Na úmysl dárce';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->Ln(5);
+
+$pdf->SetX(115);
+$pdf->SetFont($font, '', 12);
+$text = 'Vrchy';
+$pdf->MultiCell(0, 6 , $text, $border, 'R', 0, 1, '', '', true);
+$pdf->Ln(3);
+
+$pdf->SetFont($font, '', 11);
+$y = $pdf->GetY();
+$text = 'Ne   28.2.
+
+Ne     7.3.';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->SetXY(78, $y);   
+$text = 'Za † Karla Pešla, rodiče a sourozence a za celou živou rodinu
+Za † Jana a Drahomíru Víchovy, bratra a rodiče z obou stran
+';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->Ln(5);
 ?>
