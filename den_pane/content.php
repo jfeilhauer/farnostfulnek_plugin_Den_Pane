@@ -147,13 +147,96 @@ $pdf->MultiCell(79, 0 , $text, $border, 'L', 0, 1, '', '', true);
  * Třetí strana 
 */
 $pdf->AddPage($orientation='', $format='A5', $keepmargins=true, $tocpage=true);
-$pdf->SetMargins($left=10, $top=10, $right=6, true);
-$pdf->setXY(6,10);
+// první sloupec
+$pdf->SetMargins($left=6, $top=10, $right=6, true);
+$pdf->setXY(3,10);
 $pdf->SetFont($font, 'B', 13); 
 $text = '2. čtení Řím 8,31b-34';
-$pdf->MultiCell(53, 7 , $text, $border, 'L', 0, 1, '', '', true);
+$pdf->MultiCell(83, 7 , $text, $border, 'L', 0, 1, '', '', true);
 
+$pdf->SetFont($font, '', 11); 
+$text = "Bratři! Je-li Bůh s námi, kdo proti nám? Když ani
+vlastního Syna neušetřil, ale vydal ho za nás za
+všecky, jak by nám s ním nedaroval také všechno
+ostatní? Kdo vystoupí se žalobou proti Božím
+vyvoleným? Bůh přece ospravedlňuje! Kdo odsoudí? Kristus Ježíš přece zemřel, ano i z mrtvých vstal, je po Boží pravici a přimlouvá se za
+nás!
+";
+$pdf->MultiCell(80, 0 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->setX(3);
+$pdf->SetFont($font, 'B', 13); 
+$text = 'Evangelium Mk 9,2-10';
+$pdf->MultiCell(83, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->SetFont($font, '', 11); 
+$text = "Ježíš vzal s sebou Petra, Jakuba a Jana a vyvedl
+je na vysokou horu, aby byli sami. A byl před
+nimi proměněn. Jeho oděv zářivě zbělel – žádný
+bělič na zemi by ho nedovedl tak vybílit. Zjevil
+se jim Eliáš s Mojžíšem a rozmlouvali s Ježíšem.
+Petr se ujal slova a řekl Ježíšovi: „Mistře, je dobře, že jsme tady. Máme udělat tři stany: jeden
+tobě, jeden Mojžíšovi a jeden Eliášovi?“ Nevěděl
+totiž, co by měl říci; tak byli ustrašeni. Tu se objevil oblak a zastínil je. Z oblaku se ozval hlas:
+„To je můj milovaný Syn, toho poslouchejte!“
+Když se rozhlédli, najednou u sebe neviděli nikoho jiného, jenom samotného Ježíše. Když sestupovali s hory, přikázal jim, aby nikomu nevypravovali o tom, co viděli, dokud Syn člověka nevstane z mrtvých. Toho slova se chytili a uvažovali mezi sebou, co to znamená „vstát z mrtvých“.";
+$pdf->MultiCell(80, 0 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->setX(3);
+$pdf->SetFont($font, 'B', 13); 
+$text = 'Tříkrálová sbírka';
+$pdf->MultiCell(83, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->SetFont($font, '', 11); 
+$text = "V letošním roce byla Tříkrálová sbírka úplně jiná. Do Tříkrálové sbírky jste mohli přispět do
+„statických pokladniček“, které byly umístěny
+v kostelích, obchodech, lékárnách nebo jste mohli přispět online. V současné době je pro Charitu
+Odry vykoledováno 713 273 Kč. Z toho online
+450 234 Kč a ze statických pokladniček
+263 039 Kč. Což dělá 72 % oproti výtěžku z
+Tříkrálové sbírky z roku 2020. Je to úžasný výsledek, za který moc děkujeme. Kompletní výsledky za celou Českou republiku naleznete na:
+www.trikralovasbirka.cz";
+$pdf->MultiCell(80, 0 , $text, $border, 'L', 0, 1, '', '', true);
+
+// druhý sloupec
+$pdf->SetMargins($left=88, $top=10, $right=6, true);
+$pdf->setXY(88,10);
 $pdf->SetFont($font, 'B', 13); 
 $text = 'Texty k rozjímání';
 $pdf->MultiCell(53, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->SetFont($font, '', 11); 
+$text = 'liknavostí promeškal. Kéž
+najdu čas věnovat se potřebným!
+
+PÁTEK 5. 3.
+Gn 37,3-4.12-13a.17b-28
+Mt 21,33-43.45-46
+Nenávist k Ježíšovi se u velekněží a farizeů rodila ve
+chvílích, kdy poznali, že mluví právě o nich. Měli přitom
+dost času a možností změnit
+své chování. Nehrozí mi v
+něčem zatvrzelost?
+
+SOBOTA 6. 3.
+Mich 7,14-15.18-20
+Lk 15,1-3.11-32
+Neprožívám své křesťanství
+pouze jako slušný syn dodržující všechna pravidla? Soucítím se vzdáleným bratrem?
+Dovedu pochopit otce, který
+jej nadšeně vítá?
+
+NEDĚLE 7. 3.
+3. neděle postní
+Ex 20,1-17
+1 Kor 1,22-25
+Jan 2,13-25
+';
+$pdf->MultiCell(53, 170 , $text, $border, 'L', 0, 1, '', '', true);
+
+// patička
+$pdf->SetTextColor(255, 1, 16);
+$pdf->setY(193);
+$text = 'Den Páně 3';
+$pdf->MultiCell(55, 7 , $text, $border, 'R', 0, 1, '', '', true, 0);
 ?>
