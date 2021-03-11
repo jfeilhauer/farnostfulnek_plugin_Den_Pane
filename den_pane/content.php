@@ -39,5 +39,121 @@ while($text !== ''){
 $pdf->setPageRegions(array()); // vymazání oblasti
 // přidání středového obrázku
 $img = $pdf->Image('https://wordpress.farnostfulnek.cz/wp-content/uploads/2021/01/DSC_0027-scaled.jpg', 55, 80, 65, 45, '', '', '', false, 300, '', false, false, 0, '', false, false);
-$pdf->AddPage();
+/*
+ * druha strana Den Páně
+*/
+// první sloupec
+$pdf->AddPage($orientation='', $format='A5', $keepmargins=true, $tocpage=true);
+$pdf->SetMargins($left=10, $top=10, $right=6, true);
+$pdf->setXY(6,10);
+$pdf->SetFont($font, 'B', 13); 
+$text = 'Texty k rozjímání';
+$pdf->MultiCell(53, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->SetFont($font, '', 11); 
+$text = 'PONDĚLÍ 1. 3.
+Dan 9,4b-10
+Lk 6,36-38
+Moje představa o tom, jaký je
+Bůh, se odráží v mém chování
+k druhým. Nezazlívám občas
+Bohu jeho milosrdenství bez
+podmínek?
+
+ÚTERÝ 2. 3.
+Iz 1,10.16-20
+Mt 23,1-12
+Návod, jaký zaujmout postoj
+k představeným, když s nimi
+nesouhlasím. Poslechnout,
+pokud to není proti mému
+svědomí. Ale neřídit se jejich
+příkladem.
+
+STŘEDA 3. 3.
+Jer 18,18-20
+Mt 20,17-28
+Ježíš odmítá falešné představy o panování. Dospělý křesťan by měl být připraven mít
+spoluúčast na jeho osudu.
+
+ČTVRTEK 4. 3.
+Jer 17,5-10
+Lk 16,19-31
+Jednoho dne budu možná litovat, co jsem nevykonal a svou
+';
+$pdf->MultiCell(49, 0 , $text, $border, 'L', 0, 1, '', '', true, 0);
+
+// patička
+$pdf->SetTextColor(255, 1, 16);
+$pdf->setXY(5,193);
+$text = '2 Den Páně';
+$pdf->MultiCell(30, 7 , $text, $border, 'L', 0, 1, '', '', true, 0);
+
+// druhý sloupec
+$pdf->SetMargins($left=61, $top=10, $right=6, true);
+$pdf->setXY(61,10);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont($font, 'B', 13); 
+$text = '1. čtení Job 7,1-4.6-7';
+$pdf->MultiCell(82, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->SetFont($font, '', 11);     
+$pdf->setCellHeightRatio(1.0);
+$text = 'Bůh zkoušel Abraháma a řekl: „Abraháme!“
+Odpověděl: „Tady jsem!“
+Bůh pravil: „Vezmi svého syna, svého jediného
+syna, kterého miluješ, Izáka, a jdi do země Moria
+a obětuj ho tam jako celopal na jedné z hor, kterou ti označím.“
+Když došli na místo od Boha určené, Abrahám
+tam vystavěl oltář a narovnal dříví. Pak vztáhl
+ruku a vzal nůž, aby zabil svého syna.
+Ale Hospodinův anděl na něho zavolal z nebe:
+„Abraháme, Abraháme!“
+Ten se ozval: „Tady jsem!“
+Anděl řekl: „Nevztahuj svou ruku na chlapce a
+nic mu nedělej, neboť nyní vím, že se bojíš Boha,
+když mi neodpíráš svého syna, svého jediného
+syna.“ Abrahám pozdvihl své oči, a hle – za ním
+beran, který se chytil za rohy v křoví. Abrahám
+šel, vzal ho a obětoval jako celopal místo svého
+syna.
+Hospodinův anděl zavolal na Abraháma podruhé
+z nebe a řekl: „Při sobě samém přísahám – praví
+Hospodin – že jsi to udělal a neodepřel jsi mi
+svého syna, svého jediného syna, zahrnu tě požehnáním a rozmnožím tvé potomstvo jako nebeské hvězdy, jako písek na mořském břehu, a
+tvé potomstvo se zmocní brány svých nepřátel. V
+tvém potomstvu budou požehnány všechny národy země za to, že jsi mě poslechl.“';
+$pdf->MultiCell(79, 0 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->SetFont($font, 'B', 13); 
+$text = 'Žalm 116';
+$pdf->MultiCell(82, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+
+$pdf->SetFont($font, '', 11); 
+$text = 'Budu kráčet před Hospodinem v zemi živých.
+Měl jsem důvěru, i když jsem si řekl: – „Jsem tak
+sklíčen!“ – Drahocenná je v Hospodinových
+očích – smrt jeho zbožných.
+Ach, Hospodine, jsem tvůj služebník, – jsem tvůj
+služebník, syn tvé služebnice, – rozvázal jsi moje
+pouta. – Přinesu ti oběť díků, Hospodine, – a budu vzývat tvé jméno.
+Splním své sliby Hospodinu – před veškerým
+jeho lidem – v nádvořích domu Hospodinova, –
+uprostřed tebe, Jeruzaléme! ';
+$pdf->MultiCell(79, 0 , $text, $border, 'L', 0, 1, '', '', true);
+
+/*
+ * Třetí strana 
+*/
+$pdf->AddPage($orientation='', $format='A5', $keepmargins=true, $tocpage=true);
+$pdf->SetMargins($left=10, $top=10, $right=6, true);
+$pdf->setXY(6,10);
+$pdf->SetFont($font, 'B', 13); 
+$text = '2. čtení Řím 8,31b-34';
+$pdf->MultiCell(53, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->SetFont($font, 'B', 13); 
+$text = 'Texty k rozjímání';
+$pdf->MultiCell(53, 7 , $text, $border, 'L', 0, 1, '', '', true);
 ?>
