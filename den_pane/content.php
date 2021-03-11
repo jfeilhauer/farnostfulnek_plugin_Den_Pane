@@ -144,7 +144,7 @@ uprostřed tebe, Jeruzaléme! ';
 $pdf->MultiCell(79, 0 , $text, $border, 'L', 0, 1, '', '', true);
 
 /*
- * Třetí strana 
+ * Třetí strana Den Pane
 */
 $pdf->AddPage($orientation='', $format='A5', $keepmargins=true, $tocpage=true);
 // první sloupec
@@ -239,4 +239,84 @@ $pdf->SetTextColor(255, 1, 16);
 $pdf->setY(193);
 $text = 'Den Páně 3';
 $pdf->MultiCell(55, 7 , $text, $border, 'R', 0, 1, '', '', true, 0);
+
+// druhý sloupec
+$pdf->SetMargins($left=61, $top=10, $right=6, true);
+$pdf->setXY(61,10);
+$pdf->SetTextColor(0,0,0);
+
+/*
+ * ctvrta strana Den Páně
+*/
+// první sloupec
+$pdf->AddPage($orientation='', $format='A5', $keepmargins=true, $tocpage=true);
+$pdf->SetMargins($left=8, $top=10, $right=6, true);
+$pdf->setXY(6,10);
+$pdf->SetFont($font, 'B', 13); 
+$text = 'Ohlášky';
+$pdf->MultiCell(53, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+$pdf->SetFont($font, '', 11); 
+$text = '♣ Sbírka z minulé neděle na
+Haléř sv. Petra činila 17 880
+Kč. Pán Bůh zaplať.
+♣ V tomto týdnu se při mši svatých budeme modlit litanie k Nejsvětějšímu srdci Páně. Zveme obzvlášť v pátek do farního kostela u příležitosti prvního pátku v měsíci, kde se zasvětíme Nejsvětějšímu srdci Páně.
+♣ Tento týden budeme navštěvovat nemocné.
+♣ Příležitost ke svátosti smíření během týdne: Stachovice a Lukavec – půl hodiny před mší svatou, v Děrném od 16 hodin a ve farním kostele ve Fulneku během týdne půl hodiny před mší svatou a v pátek od 17 hodin.
+♣ Příští neděli 7. března bude pravidelná sbírka na opravy kostelů. Pastorační rada farnosti, mimo jiné odsouhlasila na setkání 16. února: sbírky na opravy o první neděli v měsíci budou od března 2021 na jednotlivé kostely naší farnosti - stejně jak probíhaly sbírky v roce 2018 před opravou farního kostela.
+♣ Ke společné modlitbě křížové cestě zveme každý pátek ve Fulneku a během týdne na vesnicích půl hodiny před mší svatou.
+♣ Odkazy, které můžete využít v této nelehké situaci pro domácí katechezi, liturgii a další křesťanské projekty:
+www.pastorace.cz,
+www.doo.cz,
+www.cirkev.cz,
+www.katolik.cz. 
+';
+$pdf->MultiCell(51, 0 , $text, $border, 'J', 0, 1, '', '', true, 0);
+
+// patička
+$pdf->SetTextColor(255, 1, 16);
+$pdf->setXY(5,193);
+$text = '4 Den Páně';
+$pdf->MultiCell(30, 7 , $text, $border, 'L', 0, 1, '', '', true, 0);
+
+// druhý sloupec
+$pdf->SetMargins($left=61, $top=10, $right=7, true);
+$pdf->setXY(61,10);
+$pdf->SetTextColor(0,0,0);
+$pdf->SetFont($font, 'B', 12); 
+$text = 'Úmysly mší svatých 28.2.2021 – 7.3.2021';
+$pdf->MultiCell(80, 7 , $text, $border, 'L', 0, 1, '', '', true);
+
+$y = $pdf->GetY();
+$pdf->MultiCell(80, 180 , '', $border, 'L', 0, 1, '', '', true);
+$pdf->SetXY(115,$y);
+$pdf->SetFont($font, '', 12); 
+$text = 'Fulnek';
+$pdf->MultiCell(0, 6 , $text, $border, 'R', 0, 1, '', '', true);
+
+$pdf->SetFont($font, '', 11);
+$y = $pdf->GetY();
+$text = 'Ne 28.2.
+Út 2.3.
+St 3.3.
+Čt 4.3.
+Pá 5.3.
+So 6.3.
+Ne 7.3.';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+$pdf->SetXY(80, $y);   
+$text = '9:00 Za † Annu Šindlerovou, manžela,
+syna Jiřího, rodiče z obou stran a živou
+rodinu
+16:00 _____________________
+Za členy živého růžence
+Mše svatá za farnost
+Za dar zdraví a Boží ochranu
+__________________________
+8:00 _____________________
+16:00 Na poděkování za dar manžela
+9:00 Za † Karla Pavlicu a živou rodinu
+16:00 _____________________';
+$pdf->MultiCell(0, 0 , $text, '', 'L', 0, 1, '', '', true);
+
 ?>
