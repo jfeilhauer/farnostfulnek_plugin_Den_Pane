@@ -1,0 +1,131 @@
+/* colors: red   255, 1, 16    #FF0110
+           blue  0, 176, 240   #00B0F0
+           white 255, 255, 255 #ffffff
+           black 0, 0, 0       #000000
+*/
+:root {
+    --main-img-margin-top : 113pt;
+}
+.ohlasky-content div {
+    border: thin solid black;
+}
+.dp-page * {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    font-family: times, 'Times New Roman', Georgia, serif;
+}
+.dp-container {
+    display: inline-block;
+} 
+.dp-container .dp-page:nth-child(-n+2){
+    display: inline-block;
+}
+.dp-page {
+    display: none;
+    float: left;
+    padding: 8mm 6mm 3mm 3mm;
+    margin-left: 10px; 
+    width: 148mm;
+    height: 210mm;
+    background-color: #ffffff;
+    font-family: times, 'Times New Roman', Georgia, serif;
+    border: thin solid black;    
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.dp-header {
+}
+.dp-head {
+    color: #ff0110;
+    font-size: 9.5pt;
+    font-weight: bold;
+    text-align: center;
+}
+.dp-title {
+    margin-top: 18pt;
+    height: 40pt; 
+    color: #00B0F0;
+    font-family: century;
+    font-size: 46.8pt;
+    border: thin solid #ff0110;
+    line-height: 22pt;
+}
+.dp-title span { 
+    font-size: 72pt;
+}
+.dp-date {
+    color: #ff0110;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: center; 
+    border: thin solid #ff0110;
+}
+.dp-content {
+    position: relative;
+}
+.dp-content img {
+    display: block;
+    width: 50mm;
+    top: var(--main-img-margin-top);
+    left: 125pt;
+    position: absolute;
+} 
+.dp-header-article {
+    font-size: 12pt; 
+    border: thin solid #ff0110;
+    
+}
+.dp-article{
+    float: left;        
+    display: inline-block;
+    font-size: 9.3pt;
+    width: 50%;
+    height: 150mm;
+    border: thin solid #ff0110;  
+    text-align: justify;
+    padding: 2pt;
+}
+.dp-article.first {    
+    margin-left: 10pt;
+    width: calc(50% - 10pt); 
+}
+.dp-article.first:before, .dp-article.second:before{
+    content: '';   
+    width: 0;
+    height: calc( var(--main-img-margin-top) - 16pt);  
+} 
+.dp-article.first:before {
+    float: right;   
+}
+.dp-article.second:before {
+    float: left; 
+}
+#dp_img1, #dp_img2 {
+    display: inline-block;
+    width: 25mm;
+    height: 75mm;
+    padding-top: 20mm;
+}
+#dp_img1 {
+    float: right;
+    clear: right;
+}
+#dp_img2 {
+    float: left;
+    clear: left;
+}
+
+.dp-nav {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+}
+.dp-nav span{
+    cursor: pointer; 
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
